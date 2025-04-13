@@ -1,23 +1,39 @@
 "use client"
 
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { SignOutButton, useUser } from '@clerk/nextjs'
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { PiSignOut } from 'react-icons/pi'
 
 export default function UserProfile() {
     const {user, isLoaded} = useUser()
+    const [popover, setPopover] = useState(false)
+
+    const clickButton = () => {
+      setPopover(true)
+    }
+
+    const closePopOver = () => {
+      setPopover(false)
+    }
+
   return (
-    <div className='flex flex-row gap-2'>
+    <div className='flex flex-row gap-2' onMouseLeave={closePopOver} onMouseEnter={clickButton}>
         {isLoaded ? (
             <>
-              <Image
-                  src={user?.imageUrl as string}
-                  height={40}
-                  width={40}
-                  alt='user'
-                  className='rounded-full object-cover'
-              />
+              <Popover open={popover}>
+                <PopoverTrigger className='cursor-pointer'>
+                  <Image
+                    src={user?.imageUrl as string}
+                    height={40}
+                    width={40}
+                    alt='user'
+                    className='rounded-full object-cover'
+                  />    
+                </PopoverTrigger>
+                <PopoverContent>Place content for the popover here.</PopoverContent>
+              </Popover>              
             </>
         ) : (
           <>
