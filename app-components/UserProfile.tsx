@@ -3,7 +3,9 @@
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { SignOutButton, useUser } from '@clerk/nextjs'
 import Image from 'next/image'
+import Link from 'next/link'
 import React, { useRef, useState } from 'react'
+import { BiLogOut } from 'react-icons/bi'
 import { PiSignOut } from 'react-icons/pi'
 
 export default function UserProfile() {
@@ -32,7 +34,35 @@ export default function UserProfile() {
                     className='rounded-full object-cover'
                   />    
                 </PopoverTrigger>
-                <PopoverContent>Place content for the popover here.</PopoverContent>
+                <PopoverContent>
+                  <div className='divide-y'>
+                    <div className='flex flex-col justify-center items-center pb-4'>
+                      <Image
+                        src={user?.imageUrl as string}
+                        height={80}
+                        width={80}
+                        alt='user'
+                        className='rounded-full object-cover'
+                      />
+                      <h1 className='font-bold'>{user?.fullName}</h1>
+                      <p className='text-sm text-gray-500'>{user?.username}</p>
+                    </div>
+
+                    <div className='pt-4'>
+                      <div className='w-full flex flex-col justify-center items-center'>
+                        <Link href="/user/profile">
+                          <p className='font-bold text-lg hover:underline'>View Profile</p>
+                        </Link>
+                        <SignOutButton>
+                          <button type="button" className='outline-none flex flex-col justify-center items-center'>
+                            <BiLogOut size={25} className='mt-4 cursor-pointer' />
+                            <p className='text-sm text-gray-400 cursor-default'>Logout</p>
+                          </button>
+                        </SignOutButton>
+                      </div>
+                    </div>
+                  </div>
+                </PopoverContent>
               </Popover>              
             </>
         ) : (
