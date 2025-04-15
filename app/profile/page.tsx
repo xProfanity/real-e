@@ -10,13 +10,13 @@ import { Textarea } from '@/components/ui/textarea'
 import { Checkbox } from '@/components/ui/checkbox'
 
 const formSchema = z.object({
-  ameneties: z.array(z.string({ required_error: "Amenity must be a string" })).min(1, { message: "At least one amenity is required" }),
+  ameneties: z.string({ required_error: "Amenity must be a string" }),
   area: z.number({ required_error: "Area is required" }).positive({ message: "Area must be a positive number" }),
   areaUnit: z.string({ required_error: "Area unit is required" }).min(1, { message: "Area unit cannot be empty" }),
   available: z.boolean({ required_error: "Availability status is required" }),
   bathrooms: z.number({ required_error: "Number of bathrooms is required" }).min(0, { message: "Bathrooms cannot be negative" }),
   bedrooms: z.number({ required_error: "Number of bedrooms is required" }).min(0, { message: "Bedrooms cannot be negative" }),
-  contact: z.array(z.string({ required_error: "Contact must be a string" })).min(1, { message: "At least one contact is required" }),
+  contact: z.string({ required_error: "Contact must be a string" }),
   description: z.string({ required_error: "Description is required" }).min(1, { message: "Description cannot be empty" }),
   images: z.array(z.object({
     url: z.string({ required_error: "Image URL is required" }).url({ message: "Invalid image URL" }),
@@ -37,15 +37,15 @@ export default function Profile() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       ameneties: "",
-      area: "",
+      area: 0,
       areaUnit: "",
-      available: "",
-      bathrooms: "",
-      bedrooms: "",
+      available: false,
+      bathrooms: 0,
+      bedrooms: 0,
       contact: "",
       description: "",
       location: "",
-      price: "",
+      price: 0,
       purpose: "",
       thumbnail: "",
       title: "",
@@ -121,7 +121,7 @@ export default function Profile() {
 
         <FormField
           control={form.control}
-          name="amenities"
+          name="ameneties"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Amenities</FormLabel>
