@@ -12,9 +12,8 @@ interface Props {
 }
 
 export default function Property({property}: Props) {
+    //@ts-ignore
     const imgUrl = useQuery(api.properties.getUrl, {id: property.thumbnail})
-
-    console.log('imgUrl', imgUrl)
 
   return (
     <Card className='w-fit mx-auto'>
