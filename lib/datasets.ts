@@ -1,4 +1,4 @@
-const blantyreUrbanAreas = [
+export const blantyreUrbanAreas = [
     "Blantyre City Center",
     "Limbe",
     "Ndirande",
@@ -21,7 +21,7 @@ const blantyreUrbanAreas = [
     "New Naperi"
 ];
 
-const limbeSubAreas = [
+export const limbeSubAreas = [
     "Limbe Central",
     "South Lunzu",
     "Nkolokoti",
@@ -52,7 +52,7 @@ const limbeSubAreas = [
     "St. Patricks (Mzedi)"
   ];
   
-  const ndirandeSubAreas = [
+  export const ndirandeSubAreas = [
     "Makata",
     "Chinseu",
     "Golio",
@@ -64,7 +64,7 @@ const limbeSubAreas = [
     "Naotcha"
   ];
 
-  const chilomoniSubAreas = [
+  export const chilomoniSubAreas = [
     "Chilomoni Central",
     "Beehive Area",
     "Mount Michiru Foothills",
@@ -72,7 +72,7 @@ const limbeSubAreas = [
     "Chilomoni Township"
   ];
 
-  const bangweSubAreas = [
+  export const bangweSubAreas = [
     "Lilaka",
     "Mvula",
     "Chikunda",
@@ -83,7 +83,7 @@ const limbeSubAreas = [
     "Bisiyere"
   ];
 
-  const machinjiriSubAreas = [
+  export const machinjiriSubAreas = [
     "Area 8",
     "Area 9",
     "Area 10",
@@ -97,7 +97,7 @@ const limbeSubAreas = [
     "Nkung'Unda"
   ];
 
-  const chirimbaSubAreas = [
+  export const chirimbaSubAreas = [
     "Chirimba Industrial Area",
     "Chirimba Township",
     "Chirimba Market Area",
@@ -105,7 +105,7 @@ const limbeSubAreas = [
     "Chirimba Primary School Area"
   ];
 
-  const mbayaniSubAreas = [
+  export const mbayaniSubAreas = [
     "Mbayani Market Area",
     "Mbayani Primary School Area",
     "Zalewa Roadside",
@@ -115,7 +115,7 @@ const limbeSubAreas = [
     "New Mbayani"
   ];
 
-  const chiwembeLocations = [
+  export const chiwembeLocations = [
     "Chiwembe Township",
     "Chiwembe Market",
     "Chiwembe Health Centre",
@@ -123,7 +123,7 @@ const limbeSubAreas = [
     "Chiwembe Dam"
   ];
 
-  const socheSubAreas = [
+  export const socheSubAreas = [
     "Soche East",
     "Soche West",
     "Soche Central",
@@ -133,7 +133,7 @@ const limbeSubAreas = [
     "Soche Primary School Area"
   ];
 
-  const kamezaSubAreas = [
+  export const kamezaSubAreas = [
     "Kameza Roundabout",
     "Kameza Industrial Area",
     "Kameza Market",
@@ -142,7 +142,7 @@ const limbeSubAreas = [
     "Kameza Health Centre"
   ];
 
-  const nancholiSubAreas = [
+  export const nancholiSubAreas = [
     "Nancholi Chiimire",
     "Nancholi Health Centre",
     "Nancholi Youth Organization",
@@ -150,7 +150,7 @@ const limbeSubAreas = [
     "Nancholi River Area"
   ];
 
-  const chigumulaLocations = [
+  export const chigumulaLocations = [
     "Chigumula Market",
     "Chigumula Forest Reserve",
     "Chigumula Primary School",
@@ -158,7 +158,7 @@ const limbeSubAreas = [
     "Chigumula Health Centre"
   ];
 
-  const lunzuLocations = [
+  export const lunzuLocations = [
     "Lunzu Market",
     "Lunzu Township",
     "Lunzu Hill",
@@ -167,7 +167,7 @@ const limbeSubAreas = [
     "Lunzu Residential Area"
   ];
 
-  const kabulaLocations = [
+  export const kabulaLocations = [
     "Kabula Hill",
     "Kabula Market",
     "Kabula Residential Area",

@@ -50,7 +50,7 @@ export default function UserProfile() {
 
                     <div className='pt-4'>
                       <div className='w-full flex flex-col justify-center items-center'>
-                        <Link href="/user/profile">
+                        <Link href="/profile">
                           <p className='font-bold text-lg hover:underline'>View Profile</p>
                         </Link>
                         <SignOutButton>

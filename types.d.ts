@@ -16,4 +16,5 @@ export interface House {
     thumbnail: string
     title: string
     type: string
+    url: string
 }

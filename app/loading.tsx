@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Loading() {
   return (
-    <div>Loading...</div>
+    <div className='min-h-screen flex flex-col justify-center items-center'>
+      <p>Loading...</p>
+    </div>
   )
 }
